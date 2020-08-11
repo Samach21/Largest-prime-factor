@@ -2,10 +2,10 @@
 
 int main()
 {
-	long n = 600851475143, max;
+	unsigned int n = 600851475143, max;
 	int x[4000];
 	x[0] = 0;
-	for (long i = 1; i <= 4000; i++)
+	for (unsigned int i = 1; i <= 4000; i++)
 	{
 		if (n % i == 0)
 		{
@@ -17,7 +17,7 @@ int main()
 			}
 			else
 			{
-				max = x[i-1];
+				max = x[i - 1];
 			}
 		}
 		else
