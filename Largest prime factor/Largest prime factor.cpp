@@ -3,9 +3,9 @@
 int main()
 {
 	unsigned int n = 600851475143, max;
-	int x[4000];
+	int x[400000];
 	x[0] = 0;
-	for (unsigned int i = 1; i <= 4000; i++)
+	for (unsigned int i = 1; i <= 400000; i++)
 	{
 		if (n % i == 0)
 		{
@@ -15,14 +15,14 @@ int main()
 			{
 				max = x[i];
 			}
-			else
-			{
-				max = x[i - 1];
-			}
 		}
 		else
 		{
 			x[i] = 1;
+		}
+		if (i > n)
+		{
+			i = 600000;
 		}
 	}
 	printf("Result: %d", max);
